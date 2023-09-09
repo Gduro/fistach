@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "@/App.jsx";
+import App from "./App";
 import "@/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ProtectedRoute, ProtectedRouteId } from "@/layouts";
+import { ProtectedRoute, ProtectedRouteId } from "./layouts";
 import {
   Account,
   Library,
@@ -15,7 +15,7 @@ import {
   EnglishLib,
   DeutchLib,
   OpenCard,
-} from "@/pages";
+} from "./pages";
 
 
 const Router = createBrowserRouter([
