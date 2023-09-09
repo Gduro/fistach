@@ -1,3 +1,4 @@
+import React from 'react';
 export {default as Account} from './Account';
 export{default as Create} from './Create';
 export {default as DeutchLib} from './DeutchLib';

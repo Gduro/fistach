@@ -1,4 +1,6 @@
 // export { default as component-name } from "@/path/to/component";
+import React from 'react';
+
 export {default as Loading} from './Loading';
 export {default as NavBar } from './NavBar';
 export {default as Header } from './Header';
