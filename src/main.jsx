@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // @ts-ignore
-import App from "@/App.jsx";
+import App from "@/App";
 import "@/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // @ts-ignore
