@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// @ts-ignore
-import App from "@/App";
+import App from "@/App.jsx";
 import "@/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// @ts-ignore
-import { ProtectedRoute, ProtectedRouteId } from "@/layouts/";
+import { ProtectedRoute, ProtectedRouteId } from "@/layouts";
 import {
   Account,
   Library,
@@ -17,9 +15,7 @@ import {
   EnglishLib,
   DeutchLib,
   OpenCard,
-// @ts-ignore
 } from "@/pages";
-
 
 const router = createBrowserRouter([
   {
@@ -80,7 +76,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-// @ts-ignore
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
 );
