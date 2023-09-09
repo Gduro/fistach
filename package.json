@@ -1,12 +1,12 @@
 {
-  "homepage":"http://gduro.github.io/fistaszek",
+  "homepage": "http://gduro.github.io/fistaszek",
   "name": "langapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
