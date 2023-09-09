@@ -17,7 +17,8 @@ import {
   OpenCard,
 } from "@/pages";
 
-const router = createBrowserRouter([
+
+const Router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -77,5 +78,5 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={Router} />
 );
