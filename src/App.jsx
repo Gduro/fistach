@@ -7,14 +7,11 @@ const App = () => {
   const { pathname } = useLocation();
 
   return (
-    <>
-    <h1>test</h1>
-    </>
-    // <AuthContextProvider>
-    //     <RootLayout>
-    //       <Outlet />
-    //     </RootLayout>
-    // </AuthContextProvider>
+    <AuthContextProvider>
+        <RootLayout>
+          <Outlet />
+        </RootLayout>
+    </AuthContextProvider>
   );
 };
 
