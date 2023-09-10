@@ -15,7 +15,7 @@ import {
   EnglishLib,
   DeutchLib,
   OpenCard,
-} from "@/pages";
+} from "./pages";
 
 const router = createBrowserRouter([
   {

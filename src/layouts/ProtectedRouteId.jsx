@@ -13,7 +13,7 @@ import { Create , Home} from "../pages";
 import {NoSet} from "../pages/";
 import {Loading} from "../components/layout";
 import { UserAuth } from "../lib/contexts/AuthContext";
-export default function ProtectedRouteId({ children }) {
+export default function ProtectedRouteId() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [exists, setExists] = useState(false);
