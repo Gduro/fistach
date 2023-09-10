@@ -45,11 +45,11 @@ const router = createBrowserRouter([
             element: <ProtectedRouteId />,
             children: [
               {
-                path: "/create/:id",
+                path: "create/:id",
                 element:<Create/>
               },
               {
-                path:"/open/:id",
+                path:"open/:id",
                 element:<OpenCard/>
               }
             ],
@@ -65,11 +65,11 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/login",
+        path: "login",
         element: <Login />,
       },
       {
-        path: "/signup",
+        path: "signup",
         element: <SignUp />,
       },
     ],
