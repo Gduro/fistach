@@ -18,12 +18,12 @@ import {
 } from "./pages";
 const routes= [
   {
-    
-    path: "/fistach",
+
+    path: "/",
     element: <App />,
     children: [
       {
-        path: "/fistach",
+        path: "/",
         element: <Home />,
       },
       {
@@ -76,7 +76,7 @@ const routes= [
   },
 ]
 const router = createBrowserRouter(routes,{
-  basename:"/fistach/"
+  basename:"/fistach"
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
