@@ -16,14 +16,14 @@ import {
   DeutchLib,
   OpenCard,
 } from "./pages";
-
-const router = createBrowserRouter([
+const routes= [
   {
-    path: "/",
+    
+    path: "/fistach",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/fistach",
         element: <Home />,
       },
       {
@@ -74,7 +74,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+]
+const router = createBrowserRouter(routes,{
+  basename:"/fistach/"
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
