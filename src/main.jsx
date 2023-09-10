@@ -19,26 +19,26 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/fistach/",
     element: <App />,
     children: [
       {
-        path: "",
+        path: "/fistach/",
         element: <Home />,
       },
       {
         element: <ProtectedRoute />,
         children: [
           {
-            path: "/lib",
+            path: "lib",
             element: <Library />,
           },
           {
-            path: "/account",
+            path: "account",
             element: <Account />,
           },
           {
-            path: "/MyLib",
+            path: "MyLib",
             element: <MySets />,
           },
           {
