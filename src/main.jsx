@@ -21,58 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        element: <ProtectedRoute />,
-        children: [
-          {
-            path: "/lib",
-            element: <Library />,
-          },
-          {
-            path: "/account",
-            element: <Account />,
-          },
-          {
-            path: "/MyLib",
-            element: <MySets />,
-          },
-          {
-            element: <ProtectedRouteId />,
-            children: [
-              {
-                path: "/create/:id",
-                element:<Create/>
-              },
-              {
-                path:"/open/:id",
-                element:<OpenCard/>
-              }
-            ],
-          },
-          {
-            path: "EnglishLibrary",
-            element: <EnglishLib />,
-          },
-          {
-            path: "DeutchLibrary",
-            element: <DeutchLib />,
-          },
-        ],
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/signup",
-        element: <SignUp />,
-      },
-    ],
+   
   },
 ]);
 
