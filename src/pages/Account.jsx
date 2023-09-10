@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { UserAuth } from "@/lib/contexts/AuthContext";
+import { UserAuth } from "../lib/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import {NavBar} from "@/components/layout";
-import { db } from "@/lib/configs";
+import {NavBar} from "../components/layout";
+import { db } from "../lib/configs/firebase";
 import {
   collection,
   doc,

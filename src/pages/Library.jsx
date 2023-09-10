@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavBar } from "@/components/layout/";
-import { CreateCards, FlipCardCol, db } from "@/lib/configs";
+import { NavBar } from "../components/layout/";
+import { CreateCards, FlipCardCol, db } from "../lib/configs";
 import { collection, setDoc } from "firebase/firestore";
 import English from "../../public/img/english.png";
 import Deutsch from "../../public/img/deutsch.png";

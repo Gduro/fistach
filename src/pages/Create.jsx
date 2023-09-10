@@ -12,9 +12,9 @@ import {
   arrayUnion,
   arrayRemove,
 } from "firebase/firestore";
-import { db } from "@/lib/configs";
-import {NavBar} from "@/components/layout";
-import { UserAuth } from "@/lib/contexts/AuthContext";
+import { db } from "../lib/configs";
+import {NavBar} from "../components/layout";
+import { UserAuth } from "../lib/contexts/AuthContext";
 import { FaRegTrashAlt } from "react-icons/fa";
 
 export default function Create() {

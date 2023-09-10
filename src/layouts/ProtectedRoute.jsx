@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import { Navigate, Outlet, Route } from 'react-router-dom'
-import { UserAuth } from '@/lib/contexts/AuthContext'
+import { UserAuth } from '../lib/contexts/AuthContext'
 export default function ProtectedRoute(  ) {
     const {user} = UserAuth()
 

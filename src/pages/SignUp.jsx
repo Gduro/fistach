@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "@/lib/contexts/AuthContext";
+import { UserAuth } from "../lib/contexts/AuthContext";
 export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

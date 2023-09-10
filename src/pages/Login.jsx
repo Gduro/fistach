@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { auth, db } from "@/lib/configs";
-import { UserAuth , AuthContextProvider} from "@/lib/contexts/AuthContext";
+import { auth, db } from "../lib/configs";
+import { UserAuth , AuthContextProvider} from "../lib/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";

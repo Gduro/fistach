@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { UserAuth } from "@/lib/contexts/AuthContext";
-import { CreateCards } from "@/lib/configs";
+import { UserAuth } from "../../lib/contexts/AuthContext";
+import { CreateCards } from "../../lib/configs";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 export default function Modal({handleModal,open,SetOpen}) {

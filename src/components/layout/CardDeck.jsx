@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
 import FlipCard from "./FlipCard";
-import { db } from "@/lib/configs";
+import { db } from "../../lib/configs";
 import { doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import {ModalFinish} from "@/components/layout/";
+import {ModalFinish} from "../../components/layout";
 
 
 const CardDeck = () => {

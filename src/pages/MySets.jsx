@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import english from "../../public/img/english.png";
 import nophoto from "../../public/img/nophoto.png";
 import look from "../../public/img/look.svg";
-import { Modal } from "@/components/layout/";
+import { Modal } from "../components/layout/";
 import {
   getDocs,
   query,
@@ -12,9 +12,9 @@ import {
   onSnapshot,
   deleteDoc,
 } from "firebase/firestore";
-import { db } from "@/lib/configs";
+import { db } from "../lib/configs";
 import { useNavigate } from "react-router-dom";
-import { UserAuth } from "@/lib/contexts/AuthContext";
+import { UserAuth } from "../lib/contexts/AuthContext";
 import { FaEdit } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
 

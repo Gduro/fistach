@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import english from "../../public/img/english.png";
 import nophoto from "../../public/img/nophoto.png";
 import look from "../../public/img/look.svg";
-import { Modal } from "@/components/layout/";
+import { Modal } from "../components/layout/";
 import {
   getDocs,
   query,
@@ -11,8 +11,8 @@ import {
   where,
   onSnapshot,
 } from "firebase/firestore";
-import { db } from "@/lib/configs";
-import { UserAuth } from "@/lib/contexts/AuthContext";
+import { db } from "../lib/configs";
+import { UserAuth } from "../lib/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 

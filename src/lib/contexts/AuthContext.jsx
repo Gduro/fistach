@@ -7,7 +7,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import { auth, db } from "@/lib/configs";
+import { auth, db } from "../configs";
 import {updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 

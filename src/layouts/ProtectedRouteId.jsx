@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useParams } from "react-router-dom";
-import { auth, db } from "@/lib/configs";
+import { auth, db } from "../lib/configs";
   import {
   collection,
   doc,
@@ -9,10 +9,10 @@ import { auth, db } from "@/lib/configs";
   query,
   where,
 } from "firebase/firestore";
-import { Create , Home} from "@/pages";
-import {NoSet} from "@/pages/";
-import {Loading} from "@/components/layout";
-import { UserAuth } from "@/lib/contexts/AuthContext";
+import { Create , Home} from "../pages";
+import {NoSet} from "../pages/";
+import {Loading} from "../components/layout";
+import { UserAuth } from "../lib/contexts/AuthContext";
 export default function ProtectedRouteId({ children }) {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
