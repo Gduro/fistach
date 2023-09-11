@@ -6,6 +6,10 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    host: true
+  },  
+  
   base: "/fistach/",
   build: {
     chunkSizeWarningLimit: 1600

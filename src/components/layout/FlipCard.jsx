@@ -24,14 +24,13 @@ const FlipCard = ({word1, word2}) => {
       <div
         className={` ${cardStyles.front}`}
       >
-        <div className="text-2xl ">{word1}</div>
-      </div>
+        <div className="select-none"><h1 className="text-2xl font-poppins select-none"> {word1}</h1></div>      </div>
 
 
       {/* back */}
 
       <div className={`${cardStyles.back}`}>
-        <div className="text-2xl ">{word2}</div>
+        <div className="select-none"><h1 className="text-2xl font-poppins select-none"> {word2}</h1></div>
       </div>
     </div>
   );

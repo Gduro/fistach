@@ -46,10 +46,10 @@ const MySets = () => {
       });
     }
   };
-  const deleteCard = async (e,id) => {
+  const deleteCard = async (e, id) => {
     e.stopPropagation();
-    await deleteDoc(doc(db,"fiszki",id))
-  }
+    await deleteDoc(doc(db, "fiszki", id));
+  };
   const handleCard = (id) => {
     navigate("/open/" + id);
   };
@@ -65,14 +65,14 @@ const MySets = () => {
   console.log(cardsList);
 
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center px-4 bg-purple-200 ">
-      <div className="w-auto h-[700px] bg-purple-50  rounded-3xl flex items-center justify-center flex-col gap-10 p-10 shadow-sm ">
-        <h1 className="font-poppins text-2xl text-[#090909] font-[600]">
+    <section className="w-full h-screen flex flex-col items-center justify-center px-4 bg-purple-200 overflow-x-hidden  overflow-y-auto">
+      <div className="w-full h-[700px] bg-purple-50  rounded-3xl flex items-center justify-center flex-col gap-10 p-10 shadow-sm  m-10 sm:w-full sm:h-full md:w-auto md:h-[700px] lg:w-auto">
+        <h1 className="font-poppins text-2xl text-[#090909] font-[600] text-center">
           Moje Zestawy
         </h1>
         {/* create button */}
-        <div className="flex flex-row w-full h-auto items-center justify-between text-center  gap-4">
-          <div className="border-[1px] border-solid border-[#D6D6D6] bg-[#FFF] rounded-[10px] w-[300px] h-[51px]   flex items-center text-center justify-between py-[9px] px-[23px]">
+        <div className="flex flex-row w-full h-auto items-center justify-between text-center  gap-4 ">
+          <div className="border-[1px] border-solid border-[#D6D6D6] bg-[#FFF] rounded-[10px] w-[300px] h-[51px]   flex items-center text-center justify-between py-[9px] px-[23px] flex-row ">
             <input
               type="text"
               className="rounded-[10px] text-base border-none outline-none "
@@ -104,21 +104,9 @@ const MySets = () => {
             })
             .map((data) => (
               <div
-                className="flex flex-row items-center justify-center w-auto h-auto border-[#00000069] border-solid border-[1px] p-6 rounded-[15px] gap-8 shadow-sm relative"
+                className="flex flex-row items-center justify-center h-auto border-[#00000069] border-solid border-[1px] p-6 rounded-[15px] gap-8 shadow-sm relative  sm:w-[500px] md:w[100px] lg:w-auto"
                 key={data.id}
               >
-                <div className=" z-40 absolute top-0 right-0 mt-7 mr-6 
-                flex flex-row items-center  justify-around h-auto w-[100px]">
-
-                  <FaEdit
-                    className="text-purple-500  w-7 h-7 cursor-pointer hover:text-purple-700 hover:scale-[1.1] transition-all "
-                    onClick={(e) => {
-                      handleEdit(e, data.id);
-                    }}
-                  />
-                  <FaRegTrashAlt className="text-[#ed3737] w-7 h-7 cursor-pointer hover:text-[#a03030] hover:scale-[1.1] transition-all" onClick={(e)=>{deleteCard(e,data.id)}}/>
-                </div>
-
                 <img
                   src={nophoto}
                   alt=""
@@ -126,9 +114,29 @@ const MySets = () => {
                 />
 
                 <div className="flex flex-col items-center align-text-top gap-8 justify-center w-[400px]">
+                  <div className="flex w-full flex-row">
                   <h1 className="font-poppins text-xl text-[#1b1b1b] font-[600] ">
                     {data.name}
                   </h1>
+                    <div
+                      className=" absolute top-0 right-0 mt-7 mr-6 ml-4
+                flex flex-row items-center  justify-around h-auto w-[100px]"
+                    >
+                      <FaEdit
+                        className="text-purple-500  w-7 h-7 cursor-pointer hover:text-purple-700 hover:scale-[1.1] transition-all "
+                        onClick={(e) => {
+                          handleEdit(e, data.id);
+                        }}
+                      />
+                      <FaRegTrashAlt
+                        className="text-[#ed3737] w-7 h-7 cursor-pointer hover:text-[#a03030] hover:scale-[1.1] transition-all"
+                        onClick={(e) => {
+                          deleteCard(e, data.id);
+                        }}
+                      />
+                    </div>
+                  </div>
+      
 
                   <div className="flex flex-col gap-4 w-full   ">
                     <h2 className="font-poppins text-base    text-[#1b1b1b] font-[600] ">
@@ -141,7 +149,7 @@ const MySets = () => {
                       <button
                         className="px-5 py-3 text-white duration-150  w-[100px] bg-indigo-600 rounded-lg hover:bg-indigo-700 active:shadow-lg text-sm"
                         onClick={() => handleCard(data.id)}
-                        >
+                      >
                         Otwórz
                       </button>
                       <p className="font-poppins text-sm    text-[#1b1b1b] font-[600] ">
